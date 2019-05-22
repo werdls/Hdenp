@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+	<!--
+		ELASTLC IMAGE SLIDESHOW WITH THUMBNAIL PREVIEW
+		弹性          图片     幻灯片        和        缩略图        预览
+		-->
+		<title>预览图幻灯片</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	</head>
+	<body>
+		<div class="box">
+			
+			<div class="slider">
+				<!-- 0. 修改 VIEW -> Template (关键字替换)， temoplate id -->
+				<div class="main" id="template_main">
+					<div class="main-i {{css}}" id="main_{{index}}">
+						<div class="caption">
+							<h2>{{h2}}</h2>
+							<h3>{{h3}}</h3>
+						</div>
+						<img src="img/{{index}}.jpg" class="picture"/>
+					</div>
+				</div>
+				
+				<div class="ctrl" id="template_ctrl">
+					<a  class="ctrl-i" id="ctrl_{{index}}" 
+									href="javascript:switchSlider({{index}});">
+						<img src="img/{{index}}.jpg"/>
+					</a>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/script.js" ></script>
+	</body>
+</html>
